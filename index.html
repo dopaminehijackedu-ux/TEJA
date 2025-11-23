@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Max Verstappen | World Champion</title>
+    <style>
+        /* --- VARIABLES & RESET --- */
+        :root {
+            --rb-navy: #061937;
+            --rb-red: #DC0000;
+            --rb-yellow: #FBB900;
+            --white: #ffffff;
+            --gray: #f0f0f0;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--rb-navy);
+            color: var(--white);
+            line-height: 1.6;
+        }
+
+        /* --- HEADER & HERO --- */
+        header {
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(6, 25, 55, 0.95);
+            border-bottom: 3px solid var(--rb-red);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-weight: 900;
+            font-size: 1.5rem;
+            color: var(--white);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .logo span { color: var(--rb-red); }
+
+        .hero {
+            height: 80vh;
+            background: linear-gradient(rgba(6, 25, 55, 0.7), rgba(6, 25, 55, 0.9)), 
+                        url('https://images.unsplash.com/photo-1632065475947-9286001cb823?q=80&w=1920&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            text-transform: uppercase;
+            font-style: italic;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            color: var(--rb-yellow);
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            background-color: var(--rb-red);
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-radius: 50px;
+            transition: transform 0.2s, background 0.2s;
+        }
+
+        .btn:hover {
+            background-color: var(--white);
+            color: var(--rb-red);
+            transform: scale(1.05);
+        }
+
+        /* --- STATS SECTION --- */
+        .stats-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 60px 20px;
+            background-color: var(--white);
+            color: var(--rb-navy);
+        }
+
+        .stat-card {
+            background: var(--gray);
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            width: 250px;
+            border-top: 5px solid var(--rb-yellow);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: var(--rb-navy);
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #555;
+        }
+
+        /* --- BIO SECTION --- */
+        .bio {
+            padding: 60px 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .bio h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--rb-yellow);
+            text-transform: uppercase;
+            font-style: italic;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #020d1f;
+            font-size: 0.8rem;
+            color: #888;
+            border-top: 1px solid #333;
+        }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 2.5rem; }
+            .stats-container { flex-direction: column; align-items: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">MV<span>1</span></div>
+        <a href="https://www.verstappen.com/" target="_blank" class="btn" style="padding: 8px 20px; font-size: 0.8rem;">Official Site</a>
+    </header>
+
+    <section class="hero">
+        <h1>Max Verstappen</h1>
+        <p>UNLEASH THE LION</p>
+        <a href="#stats" class="btn">View Stats</a>
+    </section>
+
+    <section id="stats" class="stats-container">
+        <div class="stat-card">
+            <div class="stat-number">1</div>
+            <div class="stat-label">Car Number</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number">3+</div>
+            <div class="stat-label">World Championships</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number">60+</div>
+            <div class="stat-label">Race Wins</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number">100+</div>
+            <div class="stat-label">Podiums</div>
+        </div>
+    </section>
+
+    <section class="bio">
+        <h2>The Flying Dutchman</h2>
+        <p>
+            Born in Belgium and racing under the Dutch flag, Max Emilian Verstappen competes in Formula One 
+            for Red Bull Racing. Known for his aggressive driving style, wet-weather mastery, and record-breaking 
+            dominance, he is one of the most successful drivers in the history of the sport.
+        </p>
+    </section>
+
+    <footer>
+        <p>Fan site created for educational purposes. Not affiliated with Red Bull Racing.</p>
+    </footer>
+
+</body>
+</html>
